@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khim Cathleen Saddi</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <style>
         /* 1. Basic Reset */
         * { box-sizing: border-box; }  
@@ -81,6 +84,45 @@
                 padding: 20px; 
             }
         }
+
+        /* Carousel Specific Styling */
+        .carousel {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .pub-slide {
+            height: 350px; /* Adjust height as needed */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .pub-title {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .pub-meta { color: #7f8c8d; font-style: italic; }
+
+        /* Carousel Arrows Color */
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            filter: invert(1) grayscale(100); /* Makes arrows dark/visible on white bg */
+        }
+
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            header { position: relative; width: 100%; height: auto; }
+            main { margin-left: 0; width: 100%; padding: 20px; }
+        }
     </style>
 </head>
 <body>
@@ -125,7 +167,7 @@
             <li>
                 <span class="date">2023 - 2026</span>
                 <strong>PhD Researcher</strong>
-                <p><strong><a href="https://sites.google.com/view/riverwatch/home-page">RiverWatch: a citizen-science approach to river pollution monitoring</strong>
+                <p><strong><a href="https://sites.google.com/view/riverwatch/home-page" target="_blank">RiverWatch: a citizen-science approach to river pollution monitoring</strong>
                     - A transdisciplinary
                     project that aims to advance river monitoring in Sarno River specific to pollution events, with a special
                     focus on macroplastics, utilizing optical camera systems and citizen science. This project involves a 
@@ -134,8 +176,8 @@
             <li>
                 <span class="date">2022</span>
                 <strong>Project Lead (initial phase) and Funding Acquisition</strong>
-                <p><strong><a href="https://www.facebook.com/ateneodenagauniversity/posts/naga-city-govt-recognizes-adnu-knkr2-the-city-government-of-naga-commends-the-ex/2694697867327105/">
-                    RECOLAB (Establishment of Recycled Concrete Laboratory in ADNU)</strong> - This project aims to
+                <p><strong><a href="https://www.facebook.com/ateneodenagauniversity/posts/naga-city-govt-recognizes-adnu-knkr2-the-city-government-of-naga-commends-the-ex/2694697867327105/" 
+                               target="_blank">RECOLAB (Establishment of Recycled Concrete Laboratory in ADNU)</strong> - This project aims to
                     advance the research capability of the ADNU Civil Engineering and Architecture Department in Recycled Concrete
                     Research through the establishment of a one-of-a-kind laboratory in the Philippines, with the main goal to reach
                     commercialization level for recycled concrete. Funding acquired from the Department of Science and Technology
@@ -144,7 +186,7 @@
             <li>
                 <span class="date">2021 - 2022</span>
                 <strong>Project Lead</strong>
-                <p><strong><a href="https://ccar2.wordpress.com/2021/09/03/project-digdi-towards-resilient-community-development/">Project DIGDI (Disaster-Resilient and Self Sustaining House for Community Growth and
+                <p><strong><a href="https://ccar2.wordpress.com/2021/09/03/project-digdi-towards-resilient-community-development/" target="_blank">Project DIGDI (Disaster-Resilient and Self Sustaining House for Community Growth and
                     Resilience Development Innovations)</strong> - A transdisciplinary project that aims to create a self-sustaining,
                     Disaster-Resilient house made of Recycled Coarse Aggregate Concrete (RCAC) with clean water system,
                     built-in rainwater catchment facility, aquaponics    system, solar-powered radio communication system,
@@ -173,6 +215,55 @@
         </ul>
     </section>
 
+    <section id="publications">
+            <h2>Featured Publications</h2>
+            
+            <div id="pubCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    
+                    <div class="carousel-item active">
+                        <div class="pub-slide">
+                            <div class="pub-title">"The Impact of Static Site Generators on Academic SEO"</div>
+                            <div class="pub-meta">Published in Journal of Web Science, 2025</div>
+                            <p style="margin-top: 15px;"><a href="#" class="btn btn-sm btn-outline-primary">Read Paper</a></p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="pub-slide">
+                            <div class="pub-title">"Neural Networks in Urban Infrastructure"</div>
+                            <div class="pub-meta">Conf. on Artificial Intelligence (CAI), 2024</div>
+                            <p style="margin-top: 15px;"><a href="#" class="btn btn-sm btn-outline-primary">View Poster</a></p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="pub-slide">
+                            <div class="pub-title">"Edge Computing: A New Frontier"</div>
+                            <div class="pub-meta">International Data Journal, 2023</div>
+                            <p style="margin-top: 15px;"><a href="#" class="btn btn-sm btn-outline-primary">Download PDF</a></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#pubCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#pubCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Other Research</h2>
+            <p>Ongoing work in sustainable computing and green algorithms.</p>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <footer>
         <p style="text-align: center; color: #999; font-size: 0.8em;">&copy; 2026 Khim Cathleen Saddi. Built with GitHub Pages.</p>
     </footer>
