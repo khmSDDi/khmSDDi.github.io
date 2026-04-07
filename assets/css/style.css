@@ -101,6 +101,8 @@ h3 {
     display: block;           /* Ensures it takes up its own line */
 }
 
+.project-list { margin-bottom: 15px; border-left: 3px; solid #3498db}
+
 /* Academic Item Styling */
 .item { margin-bottom: 15px; }
 .date { font-weight: bold; color: #7f8c8d; margin-right: 10px; }
