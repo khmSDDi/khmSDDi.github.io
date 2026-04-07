@@ -6,6 +6,7 @@ title: My Research Projects
 # Projects
 
 ## 2022-2026 PhD Researcher
+{: .project-list}
 ### RiverWatch: a citizen science approach to pollution monitoring
 Focusing on obstacle avoidance in dense urban environments using computer vision.
 
