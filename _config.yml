@@ -1,0 +1,46 @@
+# ==========================================
+# Site Settings
+# ==========================================
+title: "My Digital Garden"
+description: "A place where I share my projects and thoughts."
+url: "https://khmSDDi.github.io" # Your site's URL
+baseurl: "" # Keep as "" unless your site is at username.github.io/project-name/
+
+# ==========================================
+# Author Information
+# ==========================================
+author:
+  name: "Your Name"
+  email: "your-email@example.com"
+  twitter_username: "yourhandle"
+  github_username:  "username"
+
+# ==========================================
+# Theme Configuration
+# ==========================================
+# Use 'theme' for official GitHub themes or 'remote_theme' for community ones
+remote_theme: jekyll/minima 
+
+# ==========================================
+# Build Settings
+# ==========================================
+markdown: kramdown
+highlighter: rouge # For code snippet coloring
+
+# Plugins add extra features (SEO, Sitemaps, etc.)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# ==========================================
+# Exclude Files
+# ==========================================
+# These files will not be uploaded to your live website
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
