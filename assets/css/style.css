@@ -101,6 +101,36 @@ h3 {
     display: block;           /* Ensures it takes up its own line */
 }
 
+/* 1. Remove the default bullets */
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* 2. Style the individual list item */
+.custom-list li {
+    position: relative;
+    padding-left: 25px;   /* Creates space for the bar */
+    margin-bottom: 20px;  /* Space between list items */
+}
+
+/* 3. Create the vertical bar "|" */
+.custom-list li::before {
+    content: "";          /* Required for pseudo-elements */
+    position: absolute;
+    left: 0;
+    top: 5px;             /* Adjusts vertical position */
+    bottom: 5px;          /* Makes the bar stretch with the text */
+    width: 4px;           /* Thickness of the bar */
+    background-color: #3498db; /* Your preferred color */
+    border-radius: 2px;   /* Optional: rounds the edges of the bar */
+}
+
+/* 4. Ensure multi-line paragraphs align correctly */
+.custom-list li p {
+    margin: 10px 0 0 0;
+}
+
 .project-list {
    margin-left: 15px;
    color #2c3e50;
