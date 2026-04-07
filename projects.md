@@ -3,7 +3,7 @@ layout: default
 title: My Research Projects
 ---
 
-# Projects
+## Projects
 
 * **2022-2026 | PhD Researcher**
   ### [RiverWatch: a citizen science approach to pollution monitoring](https://sites.google.com/view/riverwatch/home-page){:target="_blank"}
