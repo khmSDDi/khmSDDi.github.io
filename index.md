@@ -9,7 +9,7 @@ title: Home
 ### Research Gallery
 <div class="animated-collage">
   <div class="collage-item">
-    <img src="{{ site.baseurl }}Images/profile.jpg" width ="300" alt="Lab Work">
+    <img src="/Images/profile.jpg" width ="300" alt="Lab Work">
   </div>
   <div class="collage-item">
     <img src="{{ site.baseurl }}Images/collage/SDG-Goal-06.png" alt="Conference">
