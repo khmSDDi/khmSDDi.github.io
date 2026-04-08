@@ -9,15 +9,15 @@ title: Home
 ### Research Gallery
 <div class="animated-collage">
   <div class="collage-item">
-    <img src="{{ site.baseurl }}/Images/profile.jpg" width ="300">
+    <img src="{{ site.baseurl }}Images/profile.jpg" width ="300"> alt="Lab Work"
   </div>
   <div class="collage-item">
-    <img src="{{ site.baseurl }}/Images/collage/SDG-Goal-06.png" alt="Conference">
+    <img src="{{ site.baseurl }}Images/collage/SDG-Goal-06.png" alt="Conference">
   </div>
   <div class="collage-item">
-    <img src="{{ site.baseurl }}/Images/collage/SDG-Goal-11.png" alt="Fieldwork">
+    <img src="{{ site.baseurl }}Images/collage/SDG-Goal-11.png" alt="Fieldwork">
   </div>
   <div class="collage-item">
-    <img src="{{ site.baseurl }}/Images/collage/SDG-Goal-13.png" alt="Analysis">
+    <img src="{{ site.baseurl }}Images/collage/SDG-Goal-13.png" alt="Analysis">
   </div>
 </div>
