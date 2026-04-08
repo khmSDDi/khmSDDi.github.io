@@ -9,6 +9,7 @@ title: Home
   </div>
 </div>
 
+
 ### Research Gallery
 <div class="animated-collage">
   <div class="collage-item">
