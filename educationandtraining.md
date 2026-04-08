@@ -4,8 +4,7 @@ title: My Education and Training
 ---
 
 ## Education
-
-
+---
 * **2022 — Present**
 ### Ph.D. in Sustainable Development and Climate Change
   IUSS Pavia, Italy / University of Naples Federico II, Italy
