@@ -288,4 +288,13 @@ li { margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #3498db; }
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     z-index: 2; /* Ensures shadow is on top */
 }
+
+@keyframes fadeInUp {
+   from { opacity: 0; transform: translateY(20px); }
+   to { opacity: 1; transform: translateY(0); }
+}
+
+.animated-collage {
+    animation: fadeInUp 1s ease-out;
+}
 }
