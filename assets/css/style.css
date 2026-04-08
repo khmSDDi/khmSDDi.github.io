@@ -114,8 +114,8 @@ a:hover { text-decoration: underline; color: #3498db; }
 .animated-collage {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important; /* 3 columns */
-    grid-template-rows: repeat(2, auto) !important;    /* 2 rows */
     gap: 15px !important;
+    max-width: 900px;
     margin: 30px 0;
     animation: fadeInUp 1s ease-out;
 }
@@ -132,6 +132,7 @@ a:hover { text-decoration: underline; color: #3498db; }
 .collage-item img {
     width: 100% !important;
     aspect-ratio: 1/1 !important;
+    height: auto !important;
     object-fit: cover !important;
     display: block !important;
     transition: transform 0.5s ease, filter 0.5s ease;
@@ -179,8 +180,6 @@ a:hover { text-decoration: underline; color: #3498db; }
         width: 100%; 
         padding: 20px; 
     }
-.animated-collage { border: 5px solid red !important; }
-}
 
 @media (max-width: 600px) {
     .animated-collage { grid-template-columns: 1fr; }
