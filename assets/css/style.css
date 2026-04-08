@@ -225,15 +225,15 @@ li { margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #3498db; }
    ========================================== */
    
 /* 1. Container for the entire collage */
-.animated-collage {
-    display: grid;
-    /* Creates 3 columns of equal width by default */
-    grid-template-columns: repeat(3, 1fr);
+div.animated-collage {
+   display: grid;
+   /* Creates 3 columns of equal width by default */
+   grid-template-columns: repeat(3, 1fr);
    /* This ensures exactly 2 rows (optional, but keeps it tidy) */
-    grid-template-rows: repeat(2, auto);
-    /* Space between photos */
-    gap: 15px; 
-    margin: 30px 0;
+   grid-template-rows: repeat(2, auto);
+   /* Space between photos */
+   gap: 15px;
+   margin: 30px 0;
 }
 
 /* 2. Styling the individual photos */
