@@ -31,12 +31,16 @@ header {
 }
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 60%;            /* Changes size based on sidebar width */
+    max-width: 180px;      /* Prevents it from getting too huge on big screens */
+    min-width: 80px;       /* Prevents it from disappearing on small screens */
+    height: auto;          /* Maintains the aspect ratio */
+    aspect-ratio: 1 / 1;   /* Ensures it stays a perfect circle */
     border-radius: 50%;
     border: 3px solid rgba(255,255,255,0.2);
     margin-bottom: 20px;
     object-fit: cover;
+    transition: width 0.3s ease; /* Smoothly animates the size change */
 }
 
 header h1 { font-size: 1.4rem; margin: 10px 0; color: #fff; }
