@@ -1,15 +1,15 @@
 /* ==========================================
    1. GLOBAL RESET & BODY
    ========================================== */
-/* { box-sizing: border-box; }*/
+* { box-sizing: border-box; }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    display: flex;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f1d1d1 !important;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin: 0;
+   display: flex;
+   line-height: 1.6;
+   color: #333;
+   background-color: #f1d1d1 !important;
 }
 
 /* ==========================================
@@ -32,22 +32,19 @@ header {
 }
 
 .profile-photo {
-    max-width: 100%;      /* Prevents it from getting too huge on big screens */
-    width: 150px;           /* Changes size based on sidebar width */
-    height: auto;          /* Maintains the aspect ratio */
-    aspect-ratio: 1 / 1;   /* Ensures it stays a perfect circle */
+    max-width: 100%;
+    width: 150px;
+    height: auto;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     border: 3px solid rgba(255,255,255,0.2);
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
     object-fit: cover;
-    transition: width 0.3s ease; /* Smoothly animates the size change */
+    transition: width 0.3s ease;
 }
 
 header h1 { font-size: 1.4rem; margin: 10px 0; color: #fff; }
 
-/* Navigation Links in Sidebar */
 nav { margin-top: 20px; width: 100%; }
 nav a {
     color: #bdc3c7;
@@ -66,7 +63,7 @@ nav a:hover {
    3. MAIN CONTENT AREA
    ========================================== */
 main {
-    margin-left: 300px; /* Must match sidebar width */
+    margin-left: 300px;
     padding: 40px 60px;
     width: calc(100% - 300px);
 }
@@ -83,128 +80,92 @@ h2 {
     margin-bottom: 25px;
 }
 
-h3 { 
-    border-bottom: 1px solid #3498db; 
-    padding-bottom: 10px; 
-    color: #555; 
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.sub-heading {
-    border-bottom: 1px solid #3498db; /* Thinner line than H2 */
-    padding-bottom: 5px;
-    color: #555;              /* Slightly lighter grey than H2 */
-    text-transform: uppercase;
-    font-size: 0.9rem;        /* Smaller than your 1.1rem H2 */
-    font-weight: 400;         /* This makes it "not bold" */
-    letter-spacing: 0.5px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    display: block;           /* Ensures it takes up its own line */
-}
-
-/* 1. Remove the default bullets */
-.custom-list {
+/* List Styling */
+.custom-list, .project-list {
     list-style: none;
     padding-left: 0;
 }
 
-/* 2. Style the individual list item */
 .custom-list li {
     position: relative;
-    padding-left: 25px;   /* Creates space for the bar */
-    margin-bottom: 20px;  /* Space between list items */
+    padding-left: 25px;
+    margin-bottom: 20px;
 }
 
-/* 3. Create the vertical bar "|" */
 .custom-list li::before {
-    content: "";          /* Required for pseudo-elements */
+    content: "";
     position: absolute;
     left: 0;
-    top: 5px;             /* Adjusts vertical position */
-    bottom: 5px;          /* Makes the bar stretch with the text */
-    width: 4px;           /* Thickness of the bar */
-    background-color: #3498db; /* Your preferred color */
-    border-radius: 2px;   /* Optional: rounds the edges of the bar */
+    top: 5px;
+    bottom: 5px;
+    width: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
 }
 
-/* 4. Ensure multi-line paragraphs align correctly */
-.custom-list li p {
-    margin: 10px 0 0 0;
-}
+.project-list { margin-left: 15px; color: #2c3e50; }
+.project-list li { margin-bottom: 25px; padding-left: 15px; border-left: 3px solid #3498db; }
 
-.project-list {
-   margin-left: 15px;
-   color #2c3e50;
-}
-.project-list li {
-   margin-bottom: 25px;
-   padding-left: 10px;
-}
-.project-list li p {
-   margin-top: 10px;
-   margin-bottom: 0;
-   color: #555;
-}
-
-/* Normal state: No underline */
-a {
-    text-decoration: none;
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-
-/* Specifically target links inside any list item */
-li a {
-    text-decoration: none !important;
-}
-
-/* Hover state: Underline appears or color changes */
-a:hover {
-    text-decoration: underline;
-    color: #3498db; /* Changes color to your accent blue when hovering */
-}
-
-
-/* Academic Item Styling */
-.item { margin-bottom: 15px; }
-.date { font-weight: bold; color: #7f8c8d; margin-right: 10px; }
-ul { list-style: none; padding: 0; }
-li { margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #3498db; }
+/* Links */
+a { text-decoration: none; transition: color 0.3s ease; }
+li a { text-decoration: none !important; }
+a:hover { text-decoration: underline; color: #3498db; }
 
 /* ==========================================
-   4. PUBLICATION CAROUSEL
+   4. COLLAGE SECTION (FIXED 2x3 GRID)
    ========================================== */
-.carousel {
-    background: white;
-    border-radius: 12px;
+.animated-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto);    /* 2 rows */
+    gap: 15px;
+    margin: 30px 0;
+    animation: fadeInUp 1s ease-out;
+}
+
+.collage-item {
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    transition: all 0.4s ease;
 }
 
-.pub-slide {
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    text-align: center;
+.collage-item img {
+    width: 100% !important;
+    height: 250px !important; /* Forces same height */
+    object-fit: cover !important;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    border: 2px solid transparent;
 }
 
-.pub-title { font-weight: bold; font-size: 1.2rem; margin-bottom: 10px; }
-.pub-meta { color: #7f8c8d; font-style: italic; font-size: 0.9rem; }
+/* Animations */
+@keyframes fadeInUp {
+   from { opacity: 0; transform: translateY(20px); }
+   to { opacity: 1; transform: translateY(0); }
+}
 
-/* Make carousel arrows visible on white background */
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    filter: invert(1) grayscale(100);
+.animated-collage:hover .collage-item img {
+    filter: grayscale(50%) brightness(70%);
+}
+
+.animated-collage .collage-item:hover img {
+    filter: grayscale(0%) brightness(100%);
+    transform: scale(1.1);
+    border-color: #3498db;
+}
+
+.animated-collage .collage-item:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    z-index: 2;
 }
 
 /* ==========================================
    5. RESPONSIVE (MOBILE)
    ========================================== */
+@media (max-width: 900px) {
+    .animated-collage { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 768px) {
     body { flex-direction: column; }
     header { 
@@ -220,96 +181,6 @@ li { margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #3498db; }
     }
 }
 
-/* ==========================================
-   6. COLLAGE
-   ========================================== */
-   
-/* 1. Container for the entire collage */
-div.animated-collage {
-   display: grid;
-   /* Creates 3 columns of equal width by default */
-   grid-template-columns: repeat(3, 1fr);
-   /* This ensures exactly 2 rows (optional, but keeps it tidy) */
-   grid-template-rows: repeat(2, auto);
-   /* Space between photos */
-   gap: 15px;
-   margin: 30px 0;
-}
-
-/* 2. Styling the individual photos */
-div.animated-collage div.collage-item img {
-   width: 100%;
-   height: 250px; /* Adjust this height to your preference */
-   object-fit: cover;
-   object-position: center;
-   border-radius: 12px;
-   display: block;
-}
-    
-/* CRITICAL: Fills the space without stretching or distorting the faces/objects */
-    object-fit: cover; 
-    
-    border-radius: 8px; /* Optional: rounds the photo corners */
-    border: 2px solid transparent;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    display: block;
-}
-
-/* 3. Modern Hover Effect (Optional) */
-.collage-item img:hover {
-    transform: scale(1.05); /* Slightly zooms the photo */
-    border-color: #3498db; /* Your accent color */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* 4. Make it Responsive (2 columns on tablets, 1 on mobile) */
-@media (max-width: 768px) {
-    .photo-collage {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .photo-collage {
-        grid-template-columns: 1fr;
-    }
-
-/* ANIMATION: When you hover over the ENTIRE container... */
-.animated-collage:hover .collage-item img {
-    filter: grayscale(50%) brightness(70%); /* Dim all photos */
-}
-
-/* ANIMATION: But when hovering specifically over ONE photo... */
-.animated-collage .collage-item:hover img {
-    filter: grayscale(0%) brightness(100%); /* Bring this one to life */
-    transform: scale(1.1); /* Smooth zoom */
-}
-
-.animated-collage .collage-item:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    z-index: 2; /* Ensures shadow is on top */
-}
-
-@keyframes fadeInUp {
-   from { opacity: 0; transform: translateY(20px); }
-   to { opacity: 1; transform: translateY(0); }
-}
-
-.animated-collage {
-    animation: fadeInUp 1s ease-out;
-}
-
-/* On tablets, switch to 2 columns */
-@media (max-width: 900px) {
-    .animated-collage {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* On phones, switch to 1 column */
 @media (max-width: 600px) {
-    .animated-collage {
-        grid-template-columns: 1fr;
-    }
-}
+    .animated-collage { grid-template-columns: 1fr; }
 }
