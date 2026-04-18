@@ -4,7 +4,7 @@
 title: "My Digital Garden"
 description: "A place where I share my projects and thoughts."
 url: "https://khimcathleensaddi.github.io" # Your site's URL
-baseurl: "/my-portfolio" # Keep as "" unless your site is at username.github.io/project-name/
+baseurl: "" # Keep as "" unless your site is at username.github.io/project-name/
 
 # ==========================================
 # Author Information
